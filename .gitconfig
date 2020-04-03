@@ -1,0 +1,9 @@
+[core]
+	editor = vim
+	autocrlf = false
+[alias]
+	lol = log --graph --oneline --decorate
+	c = commit
+	st = status --short --branch
+	l = log
+	zip = archive --format=zip -o latest.zip HEAD
