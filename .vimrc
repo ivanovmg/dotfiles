@@ -54,6 +54,9 @@ Plug 'yegappan/mru'
 " Deal with indentation objects (ai, ii, aI, iI)
 Plug 'michaeljsmith/vim-indent-object'
 
+" TOML syntax highlight
+Plug 'cespare/vim-toml'
+
 call plug#end()
 
 " No vi compatibility
@@ -150,6 +153,17 @@ set expandtab
 
 " Visual limit 80 chars for python files
 au BufRead,BufNewFile *.py setlocal colorcolumn=80
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""
+" Fortran
+"""""""""""""""""""""""""""""""""""""""""""""""""""
+let fortran_free_source=1
+let fortran_do_enddo=1
+au BufRead,BufNewFile *.f95 setlocal bs=2
+au BufRead,BufNewFile *.f95 setlocal ignorecase
+au BufRead,BufNewFile *.f95 setlocal smartcase
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""
 " CtrlP Setup
