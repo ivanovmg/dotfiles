@@ -39,7 +39,7 @@ Plug 'vim-scripts/indentpython.vim'
 Plug 'nvie/vim-flake8'
 
 " LaTeX mode
-Plug 'lervag/vimtex'
+Plug 'vim-latex/vim-latex'
 
 " Highlight/delete trailing whitespace
 Plug 'ntpeters/vim-better-whitespace'
