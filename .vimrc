@@ -3,7 +3,7 @@
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 
 " Setup vim-plug https://github.com/junegunn/vim-plug
-call plug#begin('C:\\Users\\MIvanov4\\.vim\\plugged')
+call plug#begin('$HOME/.vim/plugged')
 
 " Universel Grepper
 Plug 'mhinz/vim-grepper'
@@ -56,6 +56,9 @@ Plug 'michaeljsmith/vim-indent-object'
 
 " TOML syntax highlight
 Plug 'cespare/vim-toml'
+
+" Omni completion for C#
+Plug 'OmniSharp/omnisharp-vim'
 
 call plug#end()
 
@@ -227,3 +230,73 @@ nnoremap <leader>pwd :pwd<CR>
 " Delete buffer without closing split
 command Bd bp\|bd \#
 nnoremap <leader>bd :Bd<CR>
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""
+" LaTeX
+"""""""""""""""""""""""""""""""""""""""""""""""""""
+autocmd BufEnter *.tex :setlocal filetype=tex shiftwidth=2
+" let g:tex_flavor = 'latex'
+" let g:Tex_CompileRule_pdf='latexmk -pdf $*'
+let g:Tex_ViewRule_pdf='SumatraPDF.exe $*'
+let Tex_FoldedSections=""
+let Tex_FoldedEnvironments="figure,table"
+let Tex_FoldedMisc=""
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""
+" Grepper
+"""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:grepper = {}            " initialize g:grepper with empty dictionary
+runtime plugin/grepper.vim    " initialize g:grepper with default values
+
+let g:grepper.dir = 'repo,file'
+let g:grepper.repo = ['.git', '.hg', '.svn']
+
+nnoremap <leader>g :Grepper<cr>
+let g:grepper.prompt_mapping_tool = '<leader>g'
+
+let g:grepper.stop = 100
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""
+" Omni Sharp
+"""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:OmniSharp_server_path = "C:\\OmniSharp\\OmniSharp.exe"
+let g:OmniSharp_server_stdio = 1
+let g:OmniSharp_popup_mappings = {
+\ 'sigNext': '<C-n>',
+\ 'sigPrev': '<C-p>',
+\ 'lineDown': ['<C-e>', 'j'],
+\ 'lineUp': ['<C-y>', 'k']
+\}
+
+augroup omnisharp_commands
+    autocmd!
+
+    " Show type information automatically when the cursor stops moving.
+    " Note that the type is echoed to the Vim command line, and will overwrite
+    " any other messages in this space including e.g. ALE linting messages.
+    autocmd CursorHold *.cs OmniSharpTypeLookup
+
+    " The following commands are contextual, based on the cursor position.
+    autocmd FileType cs nnoremap <buffer> gd :OmniSharpGotoDefinition<CR>
+    autocmd FileType cs nnoremap <buffer> <Leader>fi :OmniSharpFindImplementations<CR>
+    autocmd FileType cs nnoremap <buffer> <Leader>fs :OmniSharpFindSymbol<CR>
+    autocmd FileType cs nnoremap <buffer> <Leader>fu :OmniSharpFindUsages<CR>
+
+    " Finds members in the current buffer
+    autocmd FileType cs nnoremap <buffer> <Leader>fm :OmniSharpFindMembers<CR>
+
+    autocmd FileType cs nnoremap <buffer> <Leader>fx :OmniSharpFixUsings<CR>
+    autocmd FileType cs nnoremap <buffer> <Leader>tt :OmniSharpTypeLookup<CR>
+    autocmd FileType cs nnoremap <buffer> <Leader>dc :OmniSharpDocumentation<CR>
+    autocmd FileType cs nnoremap <buffer> <C-\> :OmniSharpSignatureHelp<CR>
+    autocmd FileType cs inoremap <buffer> <C-\> <C-o>:OmniSharpSignatureHelp<CR>
+
+    " Navigate up and down by method/property/field
+    autocmd FileType cs nnoremap <buffer> <C-k> :OmniSharpNavigateUp<CR>
+    autocmd FileType cs nnoremap <buffer> <C-j> :OmniSharpNavigateDown<CR>
+
+    " Find all code errors/warnings for the current solution and populate the quickfix window
+    autocmd FileType cs nnoremap <buffer> <Leader>cc :OmniSharpGlobalCodeCheck<CR>
+augroup END
