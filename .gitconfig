@@ -1,6 +1,6 @@
 [core]
 	editor = vim
-	autocrlf = false
+	autocrlf = true
 [alias]
 	lol = log --graph --oneline --decorate
 	c = commit
