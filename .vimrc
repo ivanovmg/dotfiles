@@ -5,6 +5,9 @@ set runtimepath^=~/.vim/bundle/ctrlp.vim
 " Setup vim-plug https://github.com/junegunn/vim-plug
 call plug#begin('C:\\Users\\MIvanov4\\.vim\\plugged')
 
+" Universel Grepper
+Plug 'mhinz/vim-grepper'
+
 " Reasonable defaults
 Plug 'tpope/vim-sensible'
 
