@@ -9,6 +9,10 @@ function workon() {
 alias nvim='winpty nvim.exe'
 
 alias fzf='winpty fzf.exe'
+
+# refers to http://superuser.com/questions/650322/ignore-ntuser-dat-files-when-ls-on-git-bash
+LS_COMMON="-hG"
+alias ls=scripts/ls_filter.bat
 alias la='ls -la'
 alias lt='ls -lt'
 
