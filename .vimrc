@@ -48,9 +48,6 @@ Plug 'ntpeters/vim-better-whitespace'
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'majutsushi/tagbar'
 
-" Search tool Ack
-Plug 'mileszs/ack.vim'
-
 " Most recently used files
 Plug 'yegappan/mru'
 
@@ -202,14 +199,6 @@ set imsearch=0
 " spellchecking languages
 set spelllang=en_us,ru
 
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""
-" Ack setup
-"""""""""""""""""""""""""""""""""""""""""""""""""""
-" Use ag
-if executable('ag')
-  let g:ackprg = 'ag --vimgrep'
-endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""
 " Most recent files setup
