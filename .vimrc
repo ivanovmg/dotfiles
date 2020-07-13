@@ -62,6 +62,10 @@ call plug#end()
 " No vi compatibility
 set nocompatible
 
+augroup nord-overrides
+  autocmd!
+  autocmd ColorScheme nord highlight Folded ctermfg=14 cterm=italic
+augroup END
 colorscheme nord
 
 " Scrolling - leave one line
