@@ -119,20 +119,6 @@ if &term =~ "xterm"
 endif
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Currently Disabled Syntastic
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Plug 'vim-syntastic/syntastic'
-" let g:syntastic_always_populate_loc_list = 1
-" let g:syntastic_auto_loc_list = 0
-" let g:syntastic_check_on_open = 1
-" let g:syntastic_check_on_wq = 0
-" let g:syntastic_mode_map = {'mode':'passive'}
-" map <F10> <Esc>: SyntasticToggleMode<CR>
-" cabbrev STM SyntasticToggleMode<CR>
-" cabbrev SC SyntasticCheck<CR>
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
 " Setup wildmenu
 set wildmode=longest:list,full
 set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe  " Windows
