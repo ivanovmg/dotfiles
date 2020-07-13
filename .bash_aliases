@@ -2,16 +2,15 @@
 
 # Setup for Windows OS
 
+export WORKON_HOME=$HOME/envs
+
 function workon() {
     source $WORKON_HOME/$1/Scripts/activate
 }
 
 alias nvim='winpty nvim.exe'
-
 alias fzf='winpty fzf.exe'
 
-# refers to http://superuser.com/questions/650322/ignore-ntuser-dat-files-when-ls-on-git-bash
-LS_COMMON="-hG"
 alias ls=$HOME/scripts/ls_filter.bat
 alias la='ls -la'
 alias lt='ls -lt'
