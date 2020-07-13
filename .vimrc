@@ -125,8 +125,8 @@ set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe  " Windows
 
 set lazyredraw          " redraw only when we need to (not during macro recording)
 
-" jk is escape from insert mode
-inoremap jk <esc>
+" jf is escape from insert mode
+inoremap jf <esc>
 
 " show the matching part of the pair for [] {} and ()
 set showmatch
@@ -172,6 +172,7 @@ let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standar
 " Exclude from CtrlP most recent files
 let g:ctrlp_mruf_exclude = '*COMMIT*'
 let g:ctrlp_mruf_case_sensitive = 0
+
 """""""""""""""""""""""""""""""""""""""""""""""""""
 " Tags setup
 """""""""""""""""""""""""""""""""""""""""""""""""""
