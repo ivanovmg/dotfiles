@@ -27,3 +27,6 @@ alias ipython='winpty ipython.exe'
 alias pydoc3='py -m pydoc'
 
 alias dotfiles='git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+
+alias flake8=$WORKON_HOME/flake8/Scripts/flake8
+alias cookiecutter=$WORKON_HOME/cookiecutter/Scripts/cookiecutter
