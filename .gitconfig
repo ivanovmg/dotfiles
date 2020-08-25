@@ -2,7 +2,8 @@
 	editor = vim
 	autocrlf = true
 [alias]
-	lol = log --graph --oneline --decorate
+	lol = log --graph --oneline --decorate --date-order
+	lga = log --graph --oneline --decorate --date-order --all
 	c = commit
 	st = status --short --branch
 	l = log
