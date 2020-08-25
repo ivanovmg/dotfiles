@@ -28,6 +28,7 @@
         -I "IntelGraphics*"^
         -I "MicrosoftEdge*"^
         -I "3D Objects"^
+        -I "Creative Cloud Files"^
         -I "Templates" %*
 ) else (
     ls --color -I "NTUSER.*" -I "ntuser.*" -I "thumbs.db" -I "Thumbs.db" -I "desktop.ini" %*
