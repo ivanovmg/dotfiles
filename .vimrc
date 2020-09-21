@@ -240,6 +240,9 @@ runtime plugin/grepper.vim    " initialize g:grepper with default values
 let g:grepper.dir = 'repo,file'
 let g:grepper.repo = ['.git', '.hg', '.svn']
 
+let g:grepper.tools =
+  \ ['git', 'ag', 'ack', 'ack-grep', 'grep', 'findstr', 'rg', 'pt', 'sift']
+
 nnoremap <leader>g :Grepper<cr>
 let g:grepper.prompt_mapping_tool = '<leader>g'
 
