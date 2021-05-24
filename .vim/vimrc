@@ -65,6 +65,9 @@ call plug#end()
 " No vi compatibility
 set nocompatible
 
+" Allow to switch between buffers without saving
+set hidden
+
 augroup nord-overrides
   autocmd!
   autocmd ColorScheme nord highlight Folded ctermfg=14 cterm=italic
@@ -132,23 +135,6 @@ inoremap jf <esc>
 set showmatch
 
 """""""""""""""""""""""""""""""""""""""""""""""""""
-" Python Setup
-"""""""""""""""""""""""""""""""""""""""""""""""""""
-" Tab == 4 spaces wide
-set tabstop=4
-set softtabstop=4
-
-" when using the >> or << commands, shift lines by 4 spaces
-set shiftwidth=4
-
-" expand tabs into spaces
-set expandtab
-
-" Visual limit 80 chars for python files
-au BufRead,BufNewFile *.py setlocal colorcolumn=80
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""
 " Fortran
 """""""""""""""""""""""""""""""""""""""""""""""""""
 let fortran_free_source=1
@@ -177,7 +163,12 @@ let g:ctrlp_mruf_case_sensitive = 0
 " Tags setup
 """""""""""""""""""""""""""""""""""""""""""""""""""
 " Ignore files in gitignore
-let g:gutentags_file_list_command = 'rg --files'
+let g:gutentags_file_list_command = {
+    \ 'markers': {
+        \ '.git': 'git ls-files',
+        \ '.hg': 'hg files',
+        \ },
+    \ }
 
 " setup tagbar
 nmap <F8> :TagbarToggle<CR>
