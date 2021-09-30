@@ -8,6 +8,10 @@ function workon() {
     source $WORKON_HOME/$1/Scripts/activate
 }
 
+function venv() {
+	source venv/Scripts/activate
+}
+
 alias nvim='winpty nvim.exe'
 alias fzf='winpty fzf.exe'
 
@@ -30,3 +34,5 @@ alias dotfiles='git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
 alias flake8=$WORKON_HOME/flake8/Scripts/flake8
 alias cookiecutter=$WORKON_HOME/cookiecutter/Scripts/cookiecutter
+alias tldr=$WORKON_HOME/tldr/Scripts/tldr
+alias tlrd=tldr
