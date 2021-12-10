@@ -89,6 +89,10 @@ set encoding=utf-8
 " Working by default on Windows OS :(
 set ffs=dos,unix
 
+" width of tabulation
+set tabstop=4
+set shiftwidth=4
+
 " Statusline
 set statusline=
 set statusline+=\ %f\ 
