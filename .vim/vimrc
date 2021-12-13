@@ -31,9 +31,6 @@ Plug 'ntpeters/vim-better-whitespace'
 " Manage tags
 Plug 'majutsushi/tagbar'
 
-" Most recently used files
-Plug 'yegappan/mru'
-
 " Deal with indentation objects (ai, ii, aI, iI)
 Plug 'michaeljsmith/vim-indent-object'
 
@@ -44,6 +41,7 @@ source ~/.vim/plugins/ctrlp.vim
 source ~/.vim/plugins/gutentags.vim
 source ~/.vim/plugins/flake8.vim
 source ~/.vim/plugins/latex.vim
+source ~/.vim/plugins/mru.vim
 source ~/.vim/plugins/nordtheme.vim
 source ~/.vim/plugins/grepper.vim
 
@@ -128,13 +126,6 @@ set imsearch=0
 " spellchecking languages
 set spelllang=en_us,ru
 
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""
-" Most recent files setup
-"""""""""""""""""""""""""""""""""""""""""""""""""""
-nnoremap <leader>fr :MRU<CR>
-let MRU_Exclude_Files = '^c:\\temp\\.*\|^d:\\temp\\.*\|.git\\.*'
-let MRU_Max_Menu_Entries = 15
 
 """""""""""""""""""""""""""""""""""""""""""""""""""
 " Mappings
