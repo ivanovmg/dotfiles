@@ -1,7 +1,3 @@
-" Enable CtrlP plugin
-" Follow installation guide http://kien.github.io/ctrlp.vim/#installation
-set runtimepath^=~/.vim/bundle/ctrlp.vim
-
 " Setup vim-plug https://github.com/junegunn/vim-plug
 call plug#begin('$HOME/.vim/plugged')
 
@@ -29,9 +25,6 @@ Plug 'https://github.com/adelarsq/vim-matchit'
 " Python indentation
 Plug 'vim-scripts/indentpython.vim'
 
-" Flake 8 check via F7
-Plug 'nvie/vim-flake8'
-
 " LaTeX mode
 Plug 'vim-latex/vim-latex'
 
@@ -51,6 +44,8 @@ Plug 'michaeljsmith/vim-indent-object'
 " TOML syntax highlight
 Plug 'cespare/vim-toml'
 
+source ~/.vim/plugins/ctrlp.vim
+source ~/.vim/plugins/flake8.vim
 source ~/.vim/plugins/nordtheme.vim
 source ~/.vim/plugins/grepper.vim
 
@@ -118,21 +113,6 @@ inoremap jf <esc>
 set showmatch
 
 """""""""""""""""""""""""""""""""""""""""""""""""""
-" CtrlP Setup
-"""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
-let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/]\.(git|hg|svn)$',
-  \ 'file': '\v\.(exe|so|dll)$',
-  \ }
-" ignore files in gitignore
-let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
-
-" Exclude from CtrlP most recent files
-let g:ctrlp_mruf_exclude = '*COMMIT*'
-let g:ctrlp_mruf_case_sensitive = 0
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""
 " Tags setup
 """""""""""""""""""""""""""""""""""""""""""""""""""
 " Ignore files in gitignore
@@ -193,8 +173,3 @@ let g:Tex_ViewRule_pdf='SumatraPDF.exe $*'
 let Tex_FoldedSections=""
 let Tex_FoldedEnvironments="figure,table"
 let Tex_FoldedMisc=""
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""
-" Vim-Flake8
-"""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:flake8_cmd=$HOME.'/envs/flake8/Scripts/flake8.exe'
