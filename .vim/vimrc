@@ -44,6 +44,7 @@ source ~/.vim/plugins/latex.vim
 source ~/.vim/plugins/mru.vim
 source ~/.vim/plugins/nordtheme.vim
 source ~/.vim/plugins/grepper.vim
+source ~/.vim/plugins/vim-test.vim
 
 call plug#end()
 
