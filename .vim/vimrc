@@ -26,9 +26,6 @@ Plug 'tpope/vim-vinegar'
 " Extended % operator
 Plug 'https://github.com/adelarsq/vim-matchit'
 
-" Dark theme with barely visible comments
-Plug 'arcticicestudio/nord-vim'
-
 " Python indentation
 Plug 'vim-scripts/indentpython.vim'
 
@@ -54,9 +51,12 @@ Plug 'michaeljsmith/vim-indent-object'
 " TOML syntax highlight
 Plug 'cespare/vim-toml'
 
+source ~/.vim/plugins/nordtheme.vim
 source ~/.vim/plugins/grepper.vim
 
 call plug#end()
+
+doautocmd User PlugLoaded
 
 source ~/.vim/plugins/statusline.vim
 
@@ -65,12 +65,6 @@ set nocompatible
 
 " Allow to switch between buffers without saving
 set hidden
-
-augroup nord-overrides
-  autocmd!
-  autocmd ColorScheme nord highlight Folded ctermfg=14 cterm=italic
-augroup END
-colorscheme nord
 
 " Scrolling - leave one line
 set scrolloff=1
