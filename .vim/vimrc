@@ -32,7 +32,6 @@ Plug 'vim-latex/vim-latex'
 Plug 'ntpeters/vim-better-whitespace'
 
 " Manage tags
-Plug 'ludovicchabant/vim-gutentags'
 Plug 'majutsushi/tagbar'
 
 " Most recently used files
@@ -45,6 +44,7 @@ Plug 'michaeljsmith/vim-indent-object'
 Plug 'cespare/vim-toml'
 
 source ~/.vim/plugins/ctrlp.vim
+source ~/.vim/plugins/gutentags.vim
 source ~/.vim/plugins/flake8.vim
 source ~/.vim/plugins/nordtheme.vim
 source ~/.vim/plugins/grepper.vim
@@ -115,13 +115,6 @@ set showmatch
 """""""""""""""""""""""""""""""""""""""""""""""""""
 " Tags setup
 """""""""""""""""""""""""""""""""""""""""""""""""""
-" Ignore files in gitignore
-let g:gutentags_file_list_command = {
-    \ 'markers': {
-        \ '.git': 'git ls-files',
-        \ '.hg': 'hg files',
-        \ },
-    \ }
 
 " setup tagbar
 nmap <F8> :TagbarToggle<CR>
