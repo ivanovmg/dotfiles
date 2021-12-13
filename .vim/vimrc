@@ -25,9 +25,6 @@ Plug 'https://github.com/adelarsq/vim-matchit'
 " Python indentation
 Plug 'vim-scripts/indentpython.vim'
 
-" LaTeX mode
-Plug 'vim-latex/vim-latex'
-
 " Highlight/delete trailing whitespace
 Plug 'ntpeters/vim-better-whitespace'
 
@@ -46,6 +43,7 @@ Plug 'cespare/vim-toml'
 source ~/.vim/plugins/ctrlp.vim
 source ~/.vim/plugins/gutentags.vim
 source ~/.vim/plugins/flake8.vim
+source ~/.vim/plugins/latex.vim
 source ~/.vim/plugins/nordtheme.vim
 source ~/.vim/plugins/grepper.vim
 
@@ -154,15 +152,3 @@ nnoremap <leader>pwd :pwd<CR>
 " Delete buffer without closing split
 command Bd bp\|bd \#
 nnoremap <leader>bd :Bd<CR>
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""
-" LaTeX
-"""""""""""""""""""""""""""""""""""""""""""""""""""
-autocmd BufEnter *.tex :setlocal filetype=tex shiftwidth=2
-" let g:tex_flavor = 'latex'
-" let g:Tex_CompileRule_pdf='latexmk -pdf $*'
-let g:Tex_ViewRule_pdf='SumatraPDF.exe $*'
-let Tex_FoldedSections=""
-let Tex_FoldedEnvironments="figure,table"
-let Tex_FoldedMisc=""
