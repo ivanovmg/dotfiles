@@ -5,9 +5,6 @@ set runtimepath^=~/.vim/bundle/ctrlp.vim
 " Setup vim-plug https://github.com/junegunn/vim-plug
 call plug#begin('$HOME/.vim/plugged')
 
-" Universel Grepper
-Plug 'mhinz/vim-grepper'
-
 " Reasonable defaults
 Plug 'tpope/vim-sensible'
 
@@ -56,6 +53,8 @@ Plug 'michaeljsmith/vim-indent-object'
 
 " TOML syntax highlight
 Plug 'cespare/vim-toml'
+
+source ~/.vim/plugins/grepper.vim
 
 call plug#end()
 
@@ -221,26 +220,6 @@ let g:Tex_ViewRule_pdf='SumatraPDF.exe $*'
 let Tex_FoldedSections=""
 let Tex_FoldedEnvironments="figure,table"
 let Tex_FoldedMisc=""
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""
-" Grepper
-"""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:grepper = {}            " initialize g:grepper with empty dictionary
-runtime plugin/grepper.vim    " initialize g:grepper with default values
-
-let g:grepper.dir = 'repo,file'
-let g:grepper.repo = ['.git', '.hg', '.svn']
-let g:grepper.tools =['git', 'grep', 'rg']
-let g:grepper.stop = 100
-let g:grepper.prompt_mapping_tool = '<leader>g'
-
-nnoremap <leader>g :Grepper<cr>
-
-" Search for the current selection
-nmap gs <plug>(GrepperOperator)
-xmap gs <plug>(GrepperOperator)
-
 
 """""""""""""""""""""""""""""""""""""""""""""""""""
 " Vim-Flake8
