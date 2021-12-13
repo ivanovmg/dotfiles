@@ -58,6 +58,8 @@ source ~/.vim/plugins/grepper.vim
 
 call plug#end()
 
+source ~/.vim/plugins/statusline.vim
+
 " No vi compatibility
 set nocompatible
 
@@ -88,19 +90,6 @@ set ffs=dos,unix
 " width of tabulation
 set tabstop=4
 set shiftwidth=4
-
-" Statusline
-set statusline=
-set statusline+=\ %f\ 
-set statusline+=%*
-set statusline+=\ %h%m%r%{FugitiveStatusline()}
-set statusline+=%=
-set statusline+=\ %y
-set statusline+=\ %{&fileencoding?&fileencoding:&encoding}
-set statusline+=\ [%{&fileformat}\]
-set statusline+=\ %-6.(%l:%c%V%)
-set statusline+=\ %p%%
-set statusline+=\ 
 
 " Mappings for tabs
 nnoremap <leader><Tab> <Esc>:tabnext<CR>
