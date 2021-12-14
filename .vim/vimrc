@@ -28,9 +28,6 @@ Plug 'vim-scripts/indentpython.vim'
 " Highlight/delete trailing whitespace
 Plug 'ntpeters/vim-better-whitespace'
 
-" Manage tags
-Plug 'majutsushi/tagbar'
-
 " Deal with indentation objects (ai, ii, aI, iI)
 Plug 'michaeljsmith/vim-indent-object'
 
@@ -45,6 +42,7 @@ source ~/.vim/plugins/mru.vim
 source ~/.vim/plugins/nordtheme.vim
 source ~/.vim/plugins/grepper.vim
 source ~/.vim/plugins/vim-test.vim
+source ~/.vim/plugins/tagbar.vim
 
 call plug#end()
 
@@ -108,13 +106,6 @@ inoremap jf <esc>
 
 " show the matching part of the pair for [] {} and ()
 set showmatch
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""
-" Tags setup
-"""""""""""""""""""""""""""""""""""""""""""""""""""
-
-" setup tagbar
-nmap <F8> :TagbarToggle<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""
 " Spell checking
