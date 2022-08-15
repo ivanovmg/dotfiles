@@ -89,9 +89,6 @@ endif
 set tabstop=4
 set shiftwidth=4
 
-" Mappings for tabs
-nnoremap <leader><Tab> <Esc>:tabnext<CR>
-
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Different cursor shapes (not in cmd)
 " in normal mode (block)
