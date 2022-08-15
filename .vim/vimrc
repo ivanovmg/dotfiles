@@ -25,9 +25,6 @@ Plug 'vim-scripts/indentpython.vim'
 " Highlight/delete trailing whitespace
 Plug 'ntpeters/vim-better-whitespace'
 
-" Deal with indentation objects (ai, ii, aI, iI)
-Plug 'michaeljsmith/vim-indent-object'
-
 " TOML syntax highlight
 Plug 'cespare/vim-toml'
 
