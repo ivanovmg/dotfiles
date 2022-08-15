@@ -19,9 +19,6 @@ Plug 'tpope/vim-unimpaired'
 " Netrw manager without header
 Plug 'tpope/vim-vinegar'
 
-" Extended % operator
-Plug 'https://github.com/adelarsq/vim-matchit'
-
 " Python indentation
 Plug 'vim-scripts/indentpython.vim'
 
