@@ -34,6 +34,12 @@ Plug 'michaeljsmith/vim-indent-object'
 " TOML syntax highlight
 Plug 'cespare/vim-toml'
 
+" Snippets
+Plug 'MarcWeber/vim-addon-mw-utils'
+Plug 'tomtom/tlib_vim'
+Plug 'garbas/vim-snipmate'
+Plug 'honza/vim-snippets'
+
 source ~/.vim/plugins/ctrlp.vim
 source ~/.vim/plugins/gutentags.vim
 source ~/.vim/plugins/flake8.vim
@@ -106,6 +112,8 @@ if &term =~ "xterm"
     augroup END
 endif
 
+
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Setup wildmenu
 set wildmode=longest:list,full
@@ -147,3 +155,9 @@ nnoremap <leader>pwd :pwd<CR>
 " Delete buffer without closing split
 command Bd bp\|bd \#
 nnoremap <leader>bd :Bd<CR>
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""
+" Snippets
+"""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:snipMate = { 'snippet_version' : 1 }
