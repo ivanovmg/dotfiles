@@ -36,3 +36,9 @@ alias flake8=$WORKON_HOME/flake8/Scripts/flake8
 alias cookiecutter=$WORKON_HOME/cookiecutter/Scripts/cookiecutter
 alias tldr=$WORKON_HOME/tldr/Scripts/tldr
 alias tlrd=tldr
+alias ruff=$WORKON_HOME/ruff/Scripts/ruff
+
+alias gvim='/c/tools/vim/vim82/gvim.exe'
+alias g='gvim --remote-silent'
+
+alias git-bash='/c/Program\ Files/Git/git-bash.exe'
