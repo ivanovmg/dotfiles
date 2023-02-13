@@ -20,7 +20,7 @@ Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-vinegar'
 
 " Python indentation
-Plug 'vim-scripts/indentpython.vim'
+Plug 'vim-scripts/indentpython.vim', {'for': 'python'}
 
 " Highlight/delete trailing whitespace
 Plug 'ntpeters/vim-better-whitespace'
@@ -28,21 +28,18 @@ Plug 'ntpeters/vim-better-whitespace'
 " TOML syntax highlight
 Plug 'cespare/vim-toml'
 
-" Snippets
-Plug 'MarcWeber/vim-addon-mw-utils'
-Plug 'tomtom/tlib_vim'
-Plug 'garbas/vim-snipmate'
-Plug 'honza/vim-snippets'
-
 Plug 'dense-analysis/ale', { 'on':  'ALEToggle' }
 
+source ~/.vim/plugins/prettier.vim
 source ~/.vim/plugins/ctrlp.vim
 source ~/.vim/plugins/gutentags.vim
 source ~/.vim/plugins/flake8.vim
+source ~/.vim/plugins/pydoc.vim
 source ~/.vim/plugins/latex.vim
 source ~/.vim/plugins/nordtheme.vim
 source ~/.vim/plugins/grepper.vim
-source ~/.vim/plugins/prettier.vim
+source ~/.vim/plugins/coc.vim
+source ~/.vim/plugins/editorconfig.vim
 
 call plug#end()
 
@@ -154,3 +151,5 @@ nnoremap <leader>bd :Bd<CR>
 " Snippets
 """""""""""""""""""""""""""""""""""""""""""""""""""
 let g:snipMate = { 'snippet_version' : 1 }
+
+map <F11> <Esc>:call libcallnr("gvimfullscreen.dll", "ToggleFullScreen", 0)<CR>
