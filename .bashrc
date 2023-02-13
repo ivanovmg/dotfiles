@@ -23,3 +23,10 @@ function man {
     [[ $ok -eq 0 && -n "$pre" ]] && printf '%s' "$pre" | less || printf 'Got nothing.\n' >&2
     return $ok
 }
+
+# append (instead of overwrite) history on exit
+shopt -s histappend
+HISTTIMEFORMAT="%F %T "
+HISTCONTROL=ignoredups
+HISTSIZE=2000
+HISTFILESIZE=2000
