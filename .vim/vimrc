@@ -38,7 +38,6 @@ source ~/.vim/plugins/pydoc.vim
 source ~/.vim/plugins/latex.vim
 source ~/.vim/plugins/nordtheme.vim
 source ~/.vim/plugins/grepper.vim
-source ~/.vim/plugins/coc.vim
 source ~/.vim/plugins/editorconfig.vim
 
 call plug#end()
