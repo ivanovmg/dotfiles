@@ -1,0 +1,9 @@
+.cfg
+
+# Ignore vim files
+*~
+*.swp
+*.swo
+
+# Ignore tags
+tags
