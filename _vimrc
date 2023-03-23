@@ -9,7 +9,8 @@ if has("gui_running")
     set guioptions-=r  "remove right-hand scroll bar
     set guioptions-=L  "remove left-hand scroll bar
     set guicursor+=a:blinkon0  " do not blink
-    au GUIEnter * set t_vb=
+    autocmd GUIEnter * set t_vb=
+    set belloff=all
     set shell=$PROGRAMW6432/Git/bin/bash.exe
 endif
 
