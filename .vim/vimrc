@@ -30,6 +30,9 @@ Plug 'cespare/vim-toml'
 
 Plug 'dense-analysis/ale', { 'on':  'ALEToggle' }
 
+Plug 'leafgarland/typescript-vim'
+Plug 'peitalin/vim-jsx-typescript'
+
 source ~/.vim/plugins/prettier.vim
 source ~/.vim/plugins/ctrlp.vim
 source ~/.vim/plugins/gutentags.vim
