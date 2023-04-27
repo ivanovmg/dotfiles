@@ -27,23 +27,13 @@ source ~/.vim/settings/latex.vim
 source ~/.vim/settings/nordtheme.vim
 source ~/.vim/settings/grepper.vim
 source ~/.vim/settings/editorconfig.vim
+source ~/.vim/settings/languages.vim
 
 call plug#end()
 
 doautocmd User PlugLoaded
 
 source ~/.vim/settings/statusline.vim
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""
-" Spell checking
-"""""""""""""""""""""""""""""""""""""""""""""""""""
-" russian keymap (switch via C-^)
-set keymap=russian-jcukenwin
-set iminsert=0
-set imsearch=0
-
-" spellchecking languages
-set spelllang=en_us
 
 """""""""""""""""""""""""""""""""""""""""""""""""""
 " Snippets
