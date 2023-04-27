@@ -51,14 +51,6 @@ else
 endif
 
 
-set lazyredraw          " redraw only when we need to (not during macro recording)
-
-" jf is escape from insert mode
-inoremap jf <esc>
-
-" show the matching part of the pair for [] {} and ()
-set showmatch
-
 """""""""""""""""""""""""""""""""""""""""""""""""""
 " Spell checking
 """""""""""""""""""""""""""""""""""""""""""""""""""

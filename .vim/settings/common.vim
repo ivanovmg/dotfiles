@@ -39,3 +39,11 @@ nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
 set tabstop=4
 set shiftwidth=4
 
+" redraw only when we need to (not during macro recording)
+set lazyredraw
+
+" jf is escape from insert mode
+inoremap jf <esc>
+
+" show the matching part of the pair for [] {} and ()
+set showmatch
