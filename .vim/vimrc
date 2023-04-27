@@ -14,6 +14,7 @@ Plug 'dense-analysis/ale', { 'on':  'ALEToggle' }
 
 source ~/.vim/settings/common.vim
 source ~/.vim/settings/cursor.vim
+source ~/.vim/settings/wildmenu.vim
 source ~/.vim/settings/js.vim
 source ~/.vim/settings/git.vim
 source ~/.vim/settings/prettier.vim
@@ -49,11 +50,6 @@ else
 	set ffs=dos
 endif
 
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Setup wildmenu
-set wildmode=longest:list,full
-set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe  " Windows
 
 set lazyredraw          " redraw only when we need to (not during macro recording)
 
