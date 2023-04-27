@@ -1,21 +1,6 @@
 " Setup vim-plug https://github.com/junegunn/vim-plug
 call plug#begin('$HOME/.vim/plugged')
 
-" Reasonable defaults
-Plug 'tpope/vim-sensible'
-
-" Comment via gcc or gc<motion>
-Plug 'tpope/vim-commentary'
-
-" Change surrounding via cs)
-Plug 'tpope/vim-surround'
-
-" Useful toggles, move along quickfix list, etc
-Plug 'tpope/vim-unimpaired'
-
-" Netrw manager without header
-Plug 'tpope/vim-vinegar'
-
 " Python indentation
 Plug 'vim-scripts/indentpython.vim', {'for': 'python'}
 
@@ -27,6 +12,7 @@ Plug 'cespare/vim-toml'
 
 Plug 'dense-analysis/ale', { 'on':  'ALEToggle' }
 
+source ~/.vim/settings/common.vim
 source ~/.vim/settings/js.vim
 source ~/.vim/settings/git.vim
 source ~/.vim/settings/prettier.vim
@@ -45,28 +31,6 @@ doautocmd User PlugLoaded
 
 source ~/.vim/settings/statusline.vim
 
-" No vi compatibility
-set nocompatible
-
-" Allow to switch between buffers without saving
-set hidden
-
-" Scrolling - leave one line
-set scrolloff=1
-
-" Enable folding
-set foldmethod=indent
-
-" Unfold everything when opening buffer
-set foldlevel=99
-
-" Support unicode
-set encoding=utf-8
-
-" Highligh search
-set hlsearch
-nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
-
 function GuessOS()
 	let uname = substitute(system('uname'), '\n', '', '')
 	"Example values: Linux, Darwin, MINGW64_NT-10.0, MINGW32_NT-6.1
@@ -83,10 +47,6 @@ if GuessOS() == 'unix'
 else
 	set ffs=dos
 endif
-
-" width of tabulation
-set tabstop=4
-set shiftwidth=4
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Different cursor shapes (not in cmd)
