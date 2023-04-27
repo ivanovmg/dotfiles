@@ -4,9 +4,6 @@ call plug#begin('$HOME/.vim/plugged')
 " Reasonable defaults
 Plug 'tpope/vim-sensible'
 
-" Git management
-Plug 'tpope/vim-fugitive'
-
 " Comment via gcc or gc<motion>
 Plug 'tpope/vim-commentary'
 
@@ -33,6 +30,7 @@ Plug 'dense-analysis/ale', { 'on':  'ALEToggle' }
 Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
 
+source ~/.vim/plugins/git.vim
 source ~/.vim/plugins/prettier.vim
 source ~/.vim/plugins/ctrlp.vim
 source ~/.vim/plugins/gutentags.vim
@@ -132,7 +130,7 @@ set iminsert=0
 set imsearch=0
 
 " spellchecking languages
-set spelllang=en_us,ru
+set spelllang=en_us
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""
