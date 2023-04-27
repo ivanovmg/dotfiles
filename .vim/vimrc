@@ -27,23 +27,23 @@ Plug 'cespare/vim-toml'
 
 Plug 'dense-analysis/ale', { 'on':  'ALEToggle' }
 
-source ~/.vim/plugins/js.vim
-source ~/.vim/plugins/git.vim
-source ~/.vim/plugins/prettier.vim
-source ~/.vim/plugins/ctrlp.vim
-source ~/.vim/plugins/gutentags.vim
-source ~/.vim/plugins/flake8.vim
-source ~/.vim/plugins/pydoc.vim
-source ~/.vim/plugins/latex.vim
-source ~/.vim/plugins/nordtheme.vim
-source ~/.vim/plugins/grepper.vim
-source ~/.vim/plugins/editorconfig.vim
+source ~/.vim/settings/js.vim
+source ~/.vim/settings/git.vim
+source ~/.vim/settings/prettier.vim
+source ~/.vim/settings/ctrlp.vim
+source ~/.vim/settings/gutentags.vim
+source ~/.vim/settings/flake8.vim
+source ~/.vim/settings/pydoc.vim
+source ~/.vim/settings/latex.vim
+source ~/.vim/settings/nordtheme.vim
+source ~/.vim/settings/grepper.vim
+source ~/.vim/settings/editorconfig.vim
 
 call plug#end()
 
 doautocmd User PlugLoaded
 
-source ~/.vim/plugins/statusline.vim
+source ~/.vim/settings/statusline.vim
 
 " No vi compatibility
 set nocompatible
