@@ -14,6 +14,7 @@ Plug 'dense-analysis/ale', { 'on':  'ALEToggle' }
 
 source ~/.vim/settings/common.vim
 source ~/.vim/settings/cursor.vim
+source ~/.vim/settings/mappings.vim
 source ~/.vim/settings/wildmenu.vim
 source ~/.vim/settings/js.vim
 source ~/.vim/settings/git.vim
@@ -61,25 +62,6 @@ set imsearch=0
 
 " spellchecking languages
 set spelllang=en_us
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""
-" Mappings
-"""""""""""""""""""""""""""""""""""""""""""""""""""
-" command to change dir to current file
-command CDC cd %:p:h
-
-" change dir to current file path
-nnoremap <leader>cd :cd %:p:h<CR>:pwd<CR>
-" change local dir (this window only) to current file path
-nnoremap <leader>lcd :lcd %:p:h<CR>:pwd<CR>
-" echo current path
-nnoremap <leader>pwd :pwd<CR>
-
-" Delete buffer without closing split
-command Bd bp\|bd \#
-nnoremap <leader>bd :Bd<CR>
-
 
 """""""""""""""""""""""""""""""""""""""""""""""""""
 " Snippets
