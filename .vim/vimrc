@@ -13,6 +13,7 @@ Plug 'cespare/vim-toml'
 Plug 'dense-analysis/ale', { 'on':  'ALEToggle' }
 
 source ~/.vim/settings/common.vim
+source ~/.vim/settings/cursor.vim
 source ~/.vim/settings/js.vim
 source ~/.vim/settings/git.vim
 source ~/.vim/settings/prettier.vim
@@ -47,23 +48,6 @@ if GuessOS() == 'unix'
 else
 	set ffs=dos
 endif
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Different cursor shapes (not in cmd)
-" in normal mode (block)
-" and insert mode (vertical bar)
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-if &term =~ "xterm"
-    let &t_SI = "\e[6 q"
-    let &t_EI = "\e[2 q"
-
-    " optional reset cursor on start:
-    augroup myCmds
-    au!
-    autocmd VimEnter * silent !echo -ne "\e[2 q"
-    augroup END
-endif
-
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
