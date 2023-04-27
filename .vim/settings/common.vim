@@ -33,7 +33,6 @@ set encoding=utf-8
 
 " Highligh search
 set hlsearch
-nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
 
 " width of tabulation
 set tabstop=4
@@ -42,8 +41,24 @@ set shiftwidth=4
 " redraw only when we need to (not during macro recording)
 set lazyredraw
 
-" jf is escape from insert mode
-inoremap jf <esc>
-
 " show the matching part of the pair for [] {} and ()
 set showmatch
+
+function GuessOS()
+	let uname = substitute(system('uname'), '\n', '', '')
+	"Example values: Linux, Darwin, MINGW64_NT-10.0, MINGW32_NT-6.1
+
+	if uname == 'Linux' || uname == 'Darwin'
+		return 'unix'
+	else " windows
+		return 'windows'
+	endif
+endfunction
+
+if GuessOS() == 'unix'
+	set ffs=unix
+else
+	set ffs=dos
+endif
+
+

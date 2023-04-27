@@ -34,24 +34,6 @@ doautocmd User PlugLoaded
 
 source ~/.vim/settings/statusline.vim
 
-function GuessOS()
-	let uname = substitute(system('uname'), '\n', '', '')
-	"Example values: Linux, Darwin, MINGW64_NT-10.0, MINGW32_NT-6.1
-
-	if uname == 'Linux' || uname == 'Darwin'
-		return 'unix'
-	else " windows
-		return 'windows'
-	endif
-endfunction
-
-if GuessOS() == 'unix'
-	set ffs=unix
-else
-	set ffs=dos
-endif
-
-
 """""""""""""""""""""""""""""""""""""""""""""""""""
 " Spell checking
 """""""""""""""""""""""""""""""""""""""""""""""""""
