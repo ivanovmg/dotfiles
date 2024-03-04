@@ -30,3 +30,6 @@ HISTTIMEFORMAT="%F %T "
 HISTCONTROL=ignoredups
 HISTSIZE=2000
 HISTFILESIZE=2000
+
+# Avoid completion when cmd is empty
+shopt -s no_empty_cmd_completion
